@@ -1,0 +1,59 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 30px;
+  background: #f4f4f4;
+}
+h1 {
+  color: #333;
+}
+
+/* Part 1: Button Hover Effect */
+.fancy-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s; /* Transition */
+}
+.fancy-btn:hover {
+  background: #0056b3;
+  transform: scale(1.1); /* Animation on hover */
+}
+
+/* Part 1: Continuous Animation */
+.box {
+  width: 80px;
+  height: 80px;
+  margin: 20px auto;
+  background: crimson;
+  border-radius: 10px;
+  animation: pulse 2s infinite; /* Keyframe animation */
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); background: crimson; }
+  50% { transform: scale(1.2); background: tomato; }
+  100% { transform: scale(1); background: crimson; }
+}
+
+/* Part 3: Animated Box triggered by JS */
+.animated-box {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: teal;
+  border-radius: 12px;
+}
+.animate {
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-200px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
